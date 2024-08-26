@@ -46,12 +46,48 @@
         .visual{
             background-color: green;
             height: 400px;
+            margin-bottom: 1em;
+        }
+
+        .section{
+            width: 1360px;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+
+        .section .secLeft{
+            float:left;
+            width: 1000px;
+            background-color: skyblue;
+        }
+
+        .section .secRight{
+            float: right;
+            width: 300px;
+            background-color: pink;
+        }
+
+        .section div{
+            height: 700px;
+        }
+
+        .ft{
+            background-color: green;
+            padding: 20px 0;
+        }
+
+        .ft div{
+            width: 1360px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: orange;
+            
         }
     </style>
 </head>
 <body>
     <header class="hd">
-        <ul class="menu clear">
+        <ul class="menu clear"> <!-- width 1360 -->
             <li><a href="#">menu1</a></li>
             <li><a href="#">menu2</a></li>
             <li><a href="#">menu3</a></li>
@@ -60,7 +96,18 @@
         </ul>
     </header>
     <div class="visual">
-
+        slide
     </div>
+
+    <section class="section clear"> <!-- width 1360 -->
+        <div class="secLeft">left</div>
+        <div class="secRight">right</div>
+    </section>
+
+    <footer class="ft">
+        <div> <!-- width 1360 -->
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, temporibus.
+        </div>
+    </footer>
 </body>
 </html>
