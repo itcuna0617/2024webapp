@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;}
+        a:link{text-decoration: none; color:black}
+        a:visited{color:black}
+        /* a:link,a:visited{text-decoration: none; color:black} */
+
+        /* .menu{} 도 가능 */
+        /* float은 블럭단위요소를 인라인요소로 바꾸어준 것 */
+        li{list-style: none;}
+        ul.menu li{float:left}
+
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body > a.link1{color:blue}
+        a.link1{color:red !important}
+        #content a.link1{color:skyblue}
+
+
+        .box{
+            background-color: skyblue;
+            width: 50%
+        }
+    </style>
+</head>
+<body id="content">
+    <h1>test</h1>
+    <a href="http://www.korea.com">korea</a>
+    <a href="http://www.daum.net">daum</a>
+
+    <!-- <ul class="menu">
+        <li>text</li>
+        <li>text</li>
+    </ul> -->
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td><a href="test" class="link1">list</a></td>
+        </tr>
+    </table>
+
+    <div class="box">
+        안녕하세요.
+    </div>
+
+    <div class="box">
+        안녕하세요.
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!-- ! tab -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 반응형에 꼭 필요(화면 크기에 1대1 비율) : meta:vp 친 후에 Tab -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <!-- css 우선순위 -->
+    <!-- * < tag(1) < class(10) < id(100) -->
+    <style>
+        /* 자식관계 > */
+        body>div{background-color: pink; color:red}
+        /* 자손관계 */
+        body div{background-color: skyblue}
+    </style>
+</head>
+<!-- body에 해당하는 부분이 화면에 보임 -->
+<body>
+    <h1>로고</h1>
+    <h2>title</h2>
+    <!-- h4 : 1em -> 기본 폰트 크기와 동일 16px -->
+    <!-- 기본 폰트는 블럭 단위로 설정됨(여기서는 body에서 지정) : 부모 -->
+    <h4>h4 test</h4>
+    기본 폰트 test / 16px(1em)
+    <!-- Shift + Del 하면 한줄 지우기 -->
+    <!-- Ctrl + B 는 옆에 directory 열기 닫기 -->
+    <!-- Ctrl + / 는 주석 처리 -->
+    <!-- Alt + L + O : 라이브 페이지 열기 -->
+    <!-- p Tab 후 Lorem하고 Tab 하면 정해진 문구 가져옴. Lorem10하면 10단어만 가져옴 -->
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Provident consequuntur aliquid tenetur nobis hic, 
+        et tempora possimus aliquam, in aut expedita voluptates cumque aspernatur, 
+    </p>
+    <hr>
+    <!-- div>div>lorem1 tab -->
+    <div>
+        <!-- Shift + Alt + 화살표 아래 : 줄 그대로 복사해서 넣어줌 -->
+        <div>Lorem.</div>
+        <div>Lorem.</div>
+        <div>Lorem.</div>
+    </div>
+    <hr>
+    <!-- div>div*3>lorem2 -->
+    <div>
+        <div>Lorem, ipsum.</div>
+        <div>Possimus, veniam.</div>
+        <div>Illum, perspiciatis?</div>
+    </div>
+    <hr>
+    <!-- ul>li*10>{menu$} tab : {} 안에는 문자열을 넣는것 $는 숫자 대신 넣는듯 -->
+    <ul>
+        <li>menu1</li>
+        <!-- ul.submenu>li*5>{sub$} -->
+        <ul class="submenu">
+            <li>sub1</li>
+            <li>sub2</li>
+            <li>sub3</li>
+            <li>sub4</li>
+            <li>sub5</li>
+        </ul>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+        <li>menu7</li>
+        <li>menu8</li>
+        <li>menu9</li>
+        <li>menu10</li>
+    </ul>
+    <!-- ol>li*10>{menu$} tab -->
+    <ol>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+        <li>menu7</li>
+        <li>menu8</li>
+        <li>menu9</li>
+        <li>menu10</li>
+    </ol>
+    <!-- anker tag : 맨 위로 올라가지는 것 (#) -->
+    <!-- 얘네는 인라인이라 한줄로 나와짐 -->
+    <a href="#">test</a>
+    <img src="https://ssl.pstatic.net/melona/libs/1507/1507963/4809ae6d03b76c14880e_20240816175756255.jpg" alt="">
+    
+    <div style="width: 100px">
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deleniti, 
+                tempora non reiciendis <span style="color:red"> sint </span>vel quas id! Vero itaque, sunt sapiente maiores enim 
+                quisquam odio, inventore perspiciatis, laboriosam fuga error dicta.
+            </p>
+        </div>
+    </div>  
+
+    <!-- script의 위치는 보통 여기가 맞다 (body의 맨 뒤) -->
+    <script></script>
+</body>
+</html>
+
+<!-- html>head 친 후에 Tab 누르면 됨 (부모>자식) -->
+ <!-- 형제 관계는 형제 + 형제 형식 -->
+<!-- <html> -->
+<!-- <head> -->
+    <!-- meta : 웹/앱에 필수로 필요 -->
+    <!-- <meta> -->
+<!-- </head> -->
+<!-- </html> -->
