@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css" integrity="sha512-rV4fiystTwIvs71MLqeLbKbzosmgDS7VU5Xqk1IwFitAM+Aa9x/8Xil4CW+9DjOvVle2iqg4Ncagsbgu2MWxKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $(".slide").bxSlider({
+                    auto:true
+                })
+            }
+        )
+
+        // 이렇게 실행하면 적용 안되는 이유 : 스크립트 언어는 인터프리터 언어이기 때문에
+        // 이렇게 하게 되면 .slide 라는 식별자를 식별하지 인식하지 못함
+        // $(".slide").bxSlider({
+        //     auto: true,
+        //     pause: 2000
+        //     // mode: 'fade',
+        // });
+    </script>
     <style>
         /* reset  */
         *{margin: 0;padding: 0;box-sizing: border-box;}
@@ -170,7 +189,7 @@
     </div>
 
     <!-- script는 맨 밑에 -->
-    <script src="./js/jquery.min.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".slide").bxSlider({
@@ -178,6 +197,6 @@
             pause: 2000
             // mode: 'fade',
         });
-    </script>
+    </script> -->
 </body>
 </html>

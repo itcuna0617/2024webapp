@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        a:link,a:visited{
+            text-decoration: none;
+            color: #333;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .clear:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        img{
+            /* 이렇게 블록 처리를 해줘야 이미지 아래에 배경색이 조금 튀어나오는 부분
+            안보이게 할 수 있음 */
+            display: block;
+        }
+
+        .hd{
+            background-color: skyblue;
+        }
+        .hd .menuWrap{
+            width: 1360px;
+            height: 50px;
+            background-color: blue;
+        }
+        .hd h1{
+            float: left;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hd .menuWrap .gnb{
+            float: right;
+            background-color: violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="hd">
+        <div class="menuWrap clear">
+            <h1 class="logo">HLL</h1>
+            <nav class="gnb">
+                <ul class="clear">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">AD Info</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".slide").bxSlider({
+            auto: true,
+            pause: 2000
+        });
+    </script>
+</body>
+</html>

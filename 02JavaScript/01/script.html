@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- alert 괄호 안에는 문자열이기 때문에 홀따옴표만 가능 -->
+    <button onclick="alert('test')">클릭</button>
+    <script>
+        document.write("test")
+        console.log("hello");
+
+        var day;
+        var week = new Date().getDay();
+        console.log(week);
+
+        switch(week){
+            case 0: 
+                day = "일요일";
+                break;
+            case 2:
+                day = "화요일";
+                break;
+        }
+
+        // document.write("오늘은 " + day + "입니다.")
+        document.write(`오늘은 ${day} 입니다.`)
+
+        var city = ["서울", "부산", "대구"]
+
+        function printA(){
+            for(var i = 0; i < city.length; i++){
+                document.write(`${city[i]} <br>`)
+            }
+        }
+
+        printA();
+
+        // city.forEach(function(){})
+
+        function printArr(item, i){
+            document.write("배열데이터 [" + i + "] : " + item + "<br>")
+        }
+        city.forEach(printArr);
+
+        city.forEach(function(item,i){
+            document.write("배열데이터 [" + i + "] : " + item + "<br>")
+        })
+
+        var data = [1,2,3,4,5,6]
+
+        function mapArr(value){
+            return value * value;
+        }
+
+        var mapData = data.map(mapArr)
+
+        document.write(mapData)
+    </script>
+
+    <p id="var1"></p>
+    <p id="var2" class="var2"></p>
+    <p id="var3"></p>
+
+    <script>
+        var car = {
+            name: 'sonata',
+            speed: 100,
+            color: 'white'
+        }
+
+        document.getElementById('var1').innerHTML = car.name
+        // $("#var1").html(car.name) // jquery(선택자 부분이 훨씬 간단해짐)
+
+        // class 이름은 동일한 것을 여러번 사용 가능(ID는 그렇게 하면 에러발생)
+        // 그래서 위에 처럼 그냥 innerHTML을 해버리면 매칭이 안됨
+        // 여러개라 콜렉션 형태로 조회가 되는데 그 중에 몇 번째꺼에 매칭할건지 배열처럼 인덱스를 설정해줘야함
+        document.getElementsByClassName('var2')[0].innerHTML = car['speed']
+        document.getElementById('var3').innerHTML = car.color
+    </script>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            transition: 0.3s;
+        }
+    </style>
+
+    <div class="box"></div>
+
+    <button onclick="boxChange()">click</button>
+
+    <script>
+        function boxChange(){
+            // 속성중 - 으로 연결되는 부분은 -은 뺴기로 인식하기 떄문에 대문자로 작성해준다.
+            document.getElementsByClassName("box")[0].style.backgroundColor = "red"
+            document.getElementsByClassName("box")[0].style.width = "0"
+            // document.getElementsByClassName("box")[0].style.height = "200px"
+            // display가 none block이면 transition 동작 안함
+            // document.getElementsByClassName("box")[0].style.display = "none"
+        }
+    </script>
+</body>
+</html>
