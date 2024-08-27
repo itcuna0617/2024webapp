@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .box{
+            background-color: skyblue;
+            width: 200px;
+            height: 80px;
+            margin: 0 auto;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        /* a에 background-color가 들어가 있어서 box에 hover를 걸어도 
+        background-color가 변경이 안됨 */
+        /* .box:hover{
+            background: black;
+        } */
+        .box a{
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            /* 1초에 걸쳐서 변화가 일어남 -> 여기선 색상 변경 */
+            transition: 1s;
+        }
+        .box a:hover{
+            background-color: black;
+            color: white;
+            /* 여기에 넣었을 때는 마우스 올릴때만 정상적으로 적용되고
+            뗄 때는 바로 바뀜 -> .box a 에 넣는게 맞음 */
+            /* transition: 1s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">test</a>
+    </div>
+    <!-- 블럭 단위에 width, height를 넣더라도 한줄에 표기되지 않음 -->
+    test
+</body>
+</html>

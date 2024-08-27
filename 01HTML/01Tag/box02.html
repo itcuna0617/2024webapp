@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* box-sizing: border-box; -> border, padding 값을 box 안쪽으로
+        밀어넣어주는 것
+        margin은 들어가지 않음 */
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box01{
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            /* 상화좌우 모두 */
+            /* padding: 10px; */
+            /* top right bottom left */
+            /* padding: 20px 10px 10px 10px; */
+            /* 상하 좌우 */
+            padding: 0 10px;
+            /* bd tab */
+            border: 1px solid #000000;
+            /* padding, border 값에 따라 전체적인 사이즈가 달라짐 -> 이것도 고려해야함 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box01">
+        text
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>
