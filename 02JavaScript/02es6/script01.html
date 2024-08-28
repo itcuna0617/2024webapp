@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 변수 let, const
+    함수 arrow function
+    배열 spread operator
+    반복문 for of(전에 배운 for문보다 편하게 사용 가능) / map
+    class(이건 다루지 않을 것)
+    ** promise 동기, 비동기 - async await (중요)
+    module -->
+
+    <script>
+        // var 같은 경우는 같은 이름의 변수를 재명명해도 오류 발생 X -> 이런 문제 해결하기 위해 let, const 사용
+        let han = 1;
+        // han = 10;
+        console.log(han)
+
+        // 이러면 오류 발생
+        // let han = 10;
+
+        // 이래도 오류 발생 X
+        // var test = 10
+        // var test = 100
+
+        // const han1 = 1000
+        // // const의 경우 값의 변경이 불가능함
+        // han1 = 100
+
+        // const obj = function(){
+        //     console.log(han)
+        // }
+
+        const obj = (x,y) => x*y;
+
+        obj(10,20);
+
+        const a = [1,2,3]
+        const b = [...a]
+        b[0] = 10
+        console.log("b : " + b);
+        console.log("a : " + a);
+
+        for(const item of a){
+            console.log(item)
+        }
+
+        for(let i = 0; i < a.length; i++){
+            console.log(a[i])
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/clone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hd">
+        <div class="container menuWrap">
+            <h1 class="logo"><a href="#"><img src="./images/netmarble.jpg" alt=""></a></h1>
+            <div class="menu">
+                <ui>
+                    <li><a href="#">재단소개</a></li>
+                    <li><a href="#">재단활동</a></li>
+                    <li><a href="#">재단소식</a></li>
+                </ui>
+            </div>
+        </div>
+    </header>
+
+    <div class="slide">
+
+    </div>
+
+    <div class="container content">
+        <div class="title">
+            <h1>문화를 만들고 인재를 키우고<br>마음을 나눕니다</h1>
+        </div>
+        <div class="subtitle">
+            <p>
+                넷마블문화재단은 문화적 가치 확산을 통해 우리 사회의 미래 경쟁력을 높여 가고자<br>
+                다양한 공익 활동을 전개해 나가고 있습니다.
+            </p>
+        </div>
+        
+        <div class="banner">
+            <div class="card">
+                <div class="imgWrap">
+                    <img src="./images/content1.jpg" alt="">
+                    </div>
+                <div class="card-text">
+                    <h3>문화 만들기</h3>
+                    <p>게임을 기반으로 다양한 문화적 가치를 공유하고 <br>
+                        누구나 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgWrap">
+                    <img src="./images/content2.jpg" alt="">
+                    </div>
+                <div class="card-text">
+                    <h3>인재 키우기</h3>
+                    <p>미래 문화 산업을 이끌어 갈 가능성 있는 인재들을<br>
+                        발굴하고 체계적인 성장을 지원하기 위해 다양한<br>
+                        기회를 마련하고 있습니다.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgWrap">
+                    <img src="./images/content3.jpg" alt="">
+                    </div>
+                <div class="card-text">
+                    <h3>마음 나누기</h3>
+                    <p>나눔이 가진 영향력과 가치를 알리고 쉽게 동참할<br>
+                        수 있는 기회를 제공하여 모두가 즐거운 나눔 문화를<br>
+                        확산해가고 있습니다.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".slide").bxSlider({
+            auto: true,
+            pause: 2000
+            // mode: 'fade',
+        });
+    </script>
+</body>
+</html>
