@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .container{
+            width: 1360px;
+            margin: 0 auto;
+        }
+
+        .sec1st{
+            /* background-color: skyblue; */
+            height: 400px;
+            position: relative;
+        }
+
+        .sec1st .textWrap{
+            background-color: pink;
+            width: 1100px;
+            height: 300px;
+            padding: 80px;
+        }
+
+        .sec1st .img1{
+            position: absolute;
+            right: 0;bottom: 0;
+        }
+
+        .bg-gray{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 부모가 flex인 상태에서 한 개의 요소만 위치를 변경하고 싶을 때 -->
+    <!-- 1. 부모에 position을 준 다음 position을 통해서 조정 -->
+    <!-- 2. align-self를 통해 조정 -->
+    <div class="bg-gray" style="padding: 20px 0;">
+        <div class="container sec1st">
+            <div class="textWrap">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, repellendus.</p>
+            </div>
+            <img src="./images/photo1.jpg" alt="" class="img1">
+        </div>
+    </div>
+</body>
+</html>
