@@ -14,6 +14,10 @@ a:link,a:visited{
     color: black;
 }
 
+img{
+    display: block;
+}
+
 .clearfix:after{
     content:"";
     display: block;

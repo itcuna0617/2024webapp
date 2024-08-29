@@ -15,15 +15,17 @@ body{
 
 .container{
     width: 1280px;
-    height: 82.867px;
+    /* height: 82.867px; */
     margin: 0 auto;
     /* background-color: skyblue; */
 }
 
 .menuWrap{
+    height: 82.867px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .menuWrap .logo img{
@@ -51,13 +53,72 @@ body{
     line-height: 76px;
 }
 
-.slide{
-    height: 708px;
-    background-color: skyblue;
+.visual{
+    /* width: 100vw; */
+    /* height: 100vh; */
+    min-height: 708px;
+    /* background-color: skyblue; */
+    margin-bottom: 20px;
+}
+
+.bx-wrapper{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff;
+}
+
+.visual .item{
+    display: block;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-size: 1280*708; */
+}
+
+/* .visual .visual-text{
+    display: flex;
+} */
+
+.visual .item h1{
+    font-size: 80px;
+}
+
+.visual .item p{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.visual .slide .sd1{
+    background-image: url(../images/slide1.jpg);
+}
+
+.visual .slide .sd2{
+    background-image: url(../images/slide2.jpg);
+}
+
+.visual .slide .sd3{
+    background-image: url(../images/slide3.jpg);
+}
+
+.visual .slide .sd4{
+    background-image: url(../images/slide4.jpg);
+}
+
+.visual .slide .sd5{
+    background-image: url(../images/slide5.jpg);
 }
 
 .content{
     height: 1822.22px;
+    padding: 160px 32px;
 }
 
 .content .title{
@@ -80,6 +141,7 @@ body{
 .content .banner{
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
 }
 
 .content .banner .card{
@@ -87,14 +149,32 @@ body{
     height: 580px;
 }
 
-.content .banner .imgWrap{
+/* .content .banner .card .card-text{
+    padding: 0 28px 0 0;
+} */
+
+.content .banner .card .card-text h3{
+    margin-top: 20px;
+    font-size: 21px;
+    /* padding: 0 28px 0 0; */
+}
+
+.content .banner .card .card-text p{
+    font-size: 15px;
+    letter-spacing: -.6px;
+    margin-top: 7px;
+}
+
+.content .banner .card .imgWrap{
     height: 450px;
 }
 
-.content .banner .card-text h3{
-    font-size: 21px;
+.content .banner .card .imgWrap img{
+    transition: 0.3s;
 }
 
-.content .banner .card-text p{
-    font-size: 15px;
+.content .banner .card .imgWrap:hover img{
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
+

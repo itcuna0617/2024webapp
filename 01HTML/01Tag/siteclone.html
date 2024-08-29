@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css" integrity="sha512-rV4fiystTwIvs71MLqeLbKbzosmgDS7VU5Xqk1IwFitAM+Aa9x/8Xil4CW+9DjOvVle2iqg4Ncagsbgu2MWxKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/clone.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +25,39 @@
         </div>
     </header>
 
-    <div class="slide">
-
+    <div class="visual">
+        <ul class="slide">
+            <li class="item sd1">
+                <div class="visual-text">
+                    <div class="big"><h1>게임소통학교</h1></div>
+                    <div class="small"><p>게임으로 소통하고 게임으로 가까워지는 가족</p></div>
+                </div>
+            </li>
+            <li class="item sd2">
+                <div class="visual-text">
+                    <div class="big"><h1>전국 장애학생<br>e페스티벌</h1></div>
+                    <div class="small"><p>게임 안에서 하나 되는 모두의 축제</p></div>
+                </div>
+            </li>
+            <li class="item sd3">
+                <div class="visual-text">
+                    <div class="big"><h1>견학프로그램</h1></div>
+                    <div class="small"><p>나의 게임 산업 탐방기</p></div>
+                </div>
+            </li>
+            <li class="item sd4">
+                <div class="visual-text">
+                    <div class="big"><h1>게임아카데미</h1></div>
+                    <div class="small"><p>미래의 꿈 게임에 담다</p></div>
+                </div>
+            </li>
+            <li class="item sd5">
+                <div class="visual-text">
+                    <div class="big"><h1>어깨동무문고</h1></div>
+                    <div class="small"><p>다름을 이해하는 모두의 동화</p></div>
+                </div>  
+            </li>
+        </ul>
     </div>
 
     <div class="container content">
@@ -46,8 +78,8 @@
                     </div>
                 <div class="card-text">
                     <h3>문화 만들기</h3>
-                    <p>게임을 기반으로 다양한 문화적 가치를 공유하고 <br>
-                        누구나 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
+                    <p>게임을 기반으로 다양한 문화적 가치를 공유하고 누구나<br>
+                        즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
                 </div>
             </div>
             <div class="card">
@@ -56,9 +88,8 @@
                     </div>
                 <div class="card-text">
                     <h3>인재 키우기</h3>
-                    <p>미래 문화 산업을 이끌어 갈 가능성 있는 인재들을<br>
-                        발굴하고 체계적인 성장을 지원하기 위해 다양한<br>
-                        기회를 마련하고 있습니다.</p>
+                    <p>미래 문화 산업을 이끌어 갈 가능성 있는 인재들을 발굴하고<br>
+                        체계적인 성장 기회를 지원합니다.</p>
                 </div>
             </div>
             <div class="card">
@@ -67,20 +98,18 @@
                     </div>
                 <div class="card-text">
                     <h3>마음 나누기</h3>
-                    <p>나눔이 가진 영향력과 가치를 알리고 쉽게 동참할<br>
-                        수 있는 기회를 제공하여 모두가 즐거운 나눔 문화를<br>
-                        확산해가고 있습니다.</p>
+                    <p>나눔이 가진 영향력과 가치를 알리고 쉽게 동참할 수 있는<br>
+                        기회를 제공하여 모두가 즐거운 나눔 문화를 확산해 갑니다.</p>
                 </div>
             </div>
         </div>  
     </div>
 
+    <script src="./js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".slide").bxSlider({
-            auto: true,
-            pause: 2000
-            // mode: 'fade',
+            auto: true
         });
     </script>
 </body>
