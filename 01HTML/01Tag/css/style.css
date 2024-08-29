@@ -1,5 +1,3 @@
-/* 끝날때 세미콜론 ; */
-/* utf-8 : 인코딩 형식으로 한글이 깨지지 않게 해줌 */
 @charset "utf-8";
 
 body{
@@ -7,136 +5,189 @@ body{
     font-family: "Noto Sans", sans-serif;
 }
 
-.container{
-    width: 1280px;
-    margin: 0 auto;
-    /* position: relative; */
-}
-
-.bg-gray{
-    /* 우선순위가 밀릴 우려가 있는 경우에 !important 추가 */
-    background-color: gray !important;
-}
-
-.bg-orange{
-    background-color: orange !important;
-}
-
-.bg-sky{
-    background-color: skyblue !important;
-}
-
 .hd{
-    /* x y blur효과길이 색상 */
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    /* 이때 width와 background-color를 설정해줘야 원하는대로 나옴 */
-    /* 안그러면 아래에 있는 요소들이 비춰서 보임 */
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+    z-index: 99999;
     position: fixed;
     width: 100%;
     background-color: white;
-    z-index: 99999;
+}
+
+.container{
+    width: 1280px;
+    margin: 0 auto;
 }
 
 .menuWrap{
-    /* flex는 실제로 배열할 대상들의 부모에 설정해줘야함 */
+    height: 82.867px;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    height: 70px;
-    /* 상하 좌우 */
-    padding: 10px 0;
-    /* align-items 기본값은 stretch로 위아래를 꽉 채우고 있음 */
-    /* align-items: center; */
+    align-items: center;
 }
 
-.menuWrap .gnb ul{
+.menuWrap img{
+    width: 165px;
+    height: 35px;
+}
+
+.menuWrap ui{
     display: flex;
 }
 
-.menuWrap .gnb li{
-    width: 150px;
-    height: 70px;
+.menuWrap li{
+    width: 170px;
+    height: 76px;
 }
 
-.menuWrap .gnb a{
-    display: block;
-    /* a의 부모인 li에 height 값이 있어야 적용됨 */
+.menuWrap .menu a{
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.menuWrap .gnb a:hover{
     font-weight: bold;
-}
-
-.menuWrap .sns{
-    /* 이건 가로로 한줄에 표시되도록 하기 위한 것 */
-    display: flex;
-    /* 부모에서는 기본값인 stretch로 되어 있는데 여기에서는 center 정렬을 하겠다는 뜻 */
-    align-self: center;
-    /* 사이를 10px 만큼 떨어뜨림 */
-    gap: 10px;
-}
-
-.menuWrap .sns li{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* 길이의 절반하면 원이 됨 */
-    border-radius: 50%;
-    background-color: blue !important;
-    color: white;
+    font-size: 20px;
 }
 
 .visual{
+    padding: 82.867px 0;
+    /* width: 100%; */
     height: 100vh;
-    min-height: 600px;
+    min-height: 708px;
     margin-bottom: 20px;
 }
 
-.top{
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    background-color: red;
-    border-radius: 50%;
+.bx-wrapper{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff;
 }
 
-.banner{
+.visual .item{
+    /* width: 1280px; */
+    height: 708px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.visual .slide .sd1{
+    background-image: url(../images/slide1.jpg);
+}
+
+.visual .slide .sd2{
+    background-image: url(../images/slide2.jpg);
+}
+
+.visual .slide .sd3{
+    background-image: url(../images/slide3.jpg);
+}
+
+.visual .slide .sd4{
+    background-image: url(../images/slide4.jpg);
+}
+
+.visual .slide .sd5{
+    background-image: url(../images/slide5.jpg);
+}
+
+.visual .item h1{
+    display: block;
+    width: 456px;
+    /* height: 210px; */
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -2px;
+    vertical-align: bottom;
+}
+
+.visual .item p{
+    display: block;
+    width: 456px;
+    /* height: 36px; */
+    font-size: 24px;
+    margin-top: 14px;
+    letter-spacing: -2px;
+}
+
+.content{
+    height: 1822.22px;
+    padding: 80px 32px;
+    position: relative;
+}
+
+.content .title{
+    width: 1216px;
+    font-size: 22px !important;
+    font-weight: 700;
+    line-height: 1.41;
+    letter-spacing: -2px;
+    text-indent: -2px;
+    padding-bottom: 20px;
+}
+
+.content .title:after{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: orange;
+    margin: 10px auto;
+    position: absolute;
+    left: 32px;
+}
+
+.content .subtitle{
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: -.6px;
+    padding: 0 0 0 624px;
+}
+
+.content .banner{
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
 }
 
-.banner .card{
+.content .banner .card{
     width: 384px;
     height: 580px;
-    /* background-color: gray; */
 }
 
-.banner .card .card-text{
-    /* 좌우는 1em(16px)을 넣는 경우가 많음 */
-    padding: 16px 16px;
+/* .content .banner .card .card-text{
+    padding: 0 28px 0 0;
+} */
+
+.content .banner .card .card-text h3{
+    margin-top: 20px;
+    font-size: 21px;
+    /* padding: 0 28px 0 0; */
 }
 
-.banner .card .card-text h3{
-    margin-bottom: 10px;
+.content .banner .card .card-text p{
+    font-size: 15px;
+    letter-spacing: -.6px;
+    margin-top: 7px;
 }
 
-.banner .card .imgWrap img{
+.content .banner .card .imgWrap{
+    height: 450px;
+}
+
+.content .banner .card .imgWrap img{
     transition: 0.3s;
 }
 
-/* 만약에 card를 hover하게되면 .banner .card:hover .imgWrap img */
-.banner .card .imgWrap:hover img{
-    /* transform -> 이 안에서 여러 개의 작업 가능 */
-    /* translate() : 움직이는 것 (여기서는 위로 움직임) */
-    /* x축, y축 */
-    /* transform: translate(0, -10px) scale(1.1) rotate(10deg); */
-    transform: translate(-20px, -20px);
-    box-shadow: 30px 30px 20px rgba(0,0,0,0.3);
+.content .banner .card .imgWrap:hover img{
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
