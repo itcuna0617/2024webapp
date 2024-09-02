@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+      <h2>{{message}}</h2>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      // JavaScript를 통해서 div 안에 text 넣기
+      // document.getElementById("app").innerHTML = "test"
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const message = ref("hello");
+          return { message };
+        },
+      }).mount("#app");
+      // mount 안에 있는게 어디에 넣어줄지에 해당하는 부분
+    </script>
+  </body>
+</html>

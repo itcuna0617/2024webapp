@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="hd fixed-top bg-white">
+        <div class="header_container font_en d-flex justify-content-between pt-2 px-3">
+            <ul class="d-flex align-items-center gap-2 px-0">
+                <li class="lang fs_11 d-flex justify-content-center align-items-center gap-2">
+                    <img src="./images/lang_kor.gif" alt="" width="13px" height="11px">
+                    <a href="#">KOR</a>
+                    <img src="./images/lang_arr.gif" alt="" width="7px" height="5px">
+                </li>
+                <li><a href="#"><img src="./images/sns_facebook.gif" alt=""></a></li>
+                <li><a href="#"><img src="./images/sns_insta.gif" alt=""></a></li>
+                <li><a href="#"><img src="./images/sns_youtube.png" alt=""></a></li>
+            </ul>
+            <ul class="monami-light-gray site d-flex align-items-center gap-2 fs_11">
+                <li><a href="#" class="monami-light-gray">HOME</a></li>
+                <li>|</li>
+                <li><a href="#" class="monami-light-gray">SITE MAP</a></li>
+                <li>|</li>
+                <li><a href="#" class="monami-light-gray">CONTACT US</a></li>
+            </ul>
+        </div>
+
+        <hr class="m-0 monami-light-gray">
+
+        <nav class="py-0 header_container px-lg-3 menu navbar navbar-expand-lg">
+            <div class="px-3 px-lg-0">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/logo.jpg" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler mx-3 mx-lg-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="py-0 my-0 collapse navbar-collapse d-lg-flex justify-content-center bg-white" id="navbarSupportedContent"
+                style="height: 100%;">
+                <ul class="navbar-nav mb-2 mb-lg-0 fs_17" style="height: 100%;">
+                    <li class="nav-item px-2" style="height: 100%;">
+                        <a class="nav-link" aria-current="page" href="#" style="height: 100%;">모나미소개</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" aria-current="page" href="#">모나미제품</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link font_en" aria-current="page" href="#">NEWS & VIDEO</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" aria-current="page" href="#">모나미 미술대회</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" aria-current="page" href="#">고객지원</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" aria-current="page" href="#">기업 구매 / 개발</a>
+                    </li>
+            </div>
+            <div class="menu_icon collapse navbar-collapse d-lg-flex justify-content-end gap-2">
+                <img src="./images/btn_search.gif" alt="">
+                <div class="hamburger-menu" onclick="toggleMenu(this)">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- visual -->
+    <div class="header_area"></div>
+
+    <div class="visual d-flex align-items-center">
+        <div class="container visual_text">
+            <div class="visual_line"></div>
+            <h3 class="fs_50 text-white fw-lighter mb-5">어쩌면 삶은<br>인생이라는 종이 위에<br>써 내려가는<br>펜의 기록 같습니다.</h3>
+            <p class="fs_15">그중에서도 지우고 싶지 않은 기록이 있습니다.<br>모나미는 언제나 당신의 행복한 기록과 함께 합니다.</p>
+        </div>
+    </div>
+    <!-- new_sec -->
+    <div class="new_sec">
+        <div class="conwrap">
+            <div class="tit">
+                <h2>
+                    NEW
+                    <br>
+                    ARRIVALS
+                </h2>
+                <p>가장 먼저 만나는 설레는 기다림</p>
+            </div>
+            <div class="toparea d-flex">
+                <div class="box new1">
+                    <a href="#!"><img src="./images/new_arrival_2.jpg" alt=""></a>
+                    <div class="ondiv">
+                        <div class="align">
+                            <div class="cate">PEN</div>
+                            <div class="name">FX ZETA C3</div>
+                            <div class="plus">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box new2">
+                    <a href="#!"><img src="./images/new_arrival_5.jpg" alt=""></a>
+                    <div class="ondiv">
+                        <div class="align">
+                            <div class="cate">NOTE</div>
+                            <div class="name">지퀀스</div>
+                            <div class="plus">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btmarea d-flex">
+                <div class="box new3">
+                    <a href="#!"><img src="./images/new_arrival_3.jpg" alt=""></a>
+                    <div class="ondiv">
+                        <div class="align">
+                            <div class="cate">PREMIUM PEN</div>
+                            <div class="name">프러스펜3000프라임</div>
+                            <div class="plus">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box new4">
+                    <a href="#!"><img src="./images/new_arrival_1.jpg" alt=""></a>
+                    <div class="ondiv">
+                        <div class="align">
+                            <div class="cate">FOUNTAIN PEN</div>
+                            <div class="name">153 아이디 만년필</div>
+                            <div class="plus">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box new5">
+                    <a href="#!"><img src="./images/new_arrival_4.jpg" alt=""></a>
+                    <div class="ondiv">
+                        <div class="align">
+                            <div class="cate">WATER-BASED MARKER</div>
+                            <div class="name">프러스펜 3000</div>
+                            <div class="plus">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- best_sec -->
+    <div class="best_sec py-5">
+        <h3 class="tit text-center fs_32 font_en">BEST PRODUCT</h3>
+        <p class="subtit text-center fs_13_5">언제어디서나 생활 속에 함께하는 모나미</p>
+
+        <div class="p_tabs">
+            <div class="catebtn mb-3 d-flex justify-content-center">
+                <a href="#!" data-filter=".premium" class="category text-center fs_14 on" id="btn">프리미엄 펜</a>
+                <a href="#!" data-filter=".pencil" class="category text-center fs_14">펜·펜슬</a>
+                <a href="#!" data-filter=".marker" class="category text-center fs_14">마카·컬러링</a>
+                <a href="#!" data-filter=".note" class="category text-center fs_14">노트·사무용품</a>
+            </div>
+        </div>
+        <div class="best_slide d-flex flex-wrap overflow-hidden dragscroll">
+            <div class="card_wrap d-flex dragscroll overflow-hidden white-space-nowrap">
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen1.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">프러스펜 3000 프라임</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen2.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 리스펙트 리파인</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen3.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">만년필</div>
+                            <div class="itemname fs_15">153 아이디 만년필</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen4.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">만년필</div>
+                            <div class="itemname fs_15">153 네오 만년필 EF</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen5.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 블랙 & 화이트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen6.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 골드</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen7.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 아이디</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen8.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">60주년 프러스펜 3000 데스크펜 스페셜 에디션</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen9.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">고급샤프</div>
+                            <div class="itemname fs_15">153 아이디 샤프</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen10.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 네오</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen11.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 리스펙트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen11.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 리스펙트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item premium mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pen11.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">프리미엄펜</div>
+                            <div class="itemname fs_15">153 리스펙트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil1.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">샤프/샤프심</div>
+                            <div class="itemname fs_15">그리픽스 팝 샤프</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil2.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">사인펜 슈퍼 파스텔 12색</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil3.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">프러스펜 3000 피그먼트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil4.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">라이브 칼라(화이트 축)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil5.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">유성볼펜</div>
+                            <div class="itemname fs_15">FX ZETA C3</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil6.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">유성볼펜</div>
+                            <div class="itemname fs_15">제니스7</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil7.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">프러스펜 3000 60색 세트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil8.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">FX153</div>
+                            <div class="itemname fs_15">FX153</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil9.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">유성볼펜</div>
+                            <div class="itemname fs_15">FX ZETA</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil10.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">형광펜</div>
+                            <div class="itemname fs_15">에센티 트윈</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil11.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">연필</div>
+                            <div class="itemname fs_15">NEW 바우하우스 연필</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil12.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">샤프/샤프심</div>
+                            <div class="itemname fs_15">클리키</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil13.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">유성볼펜</div>
+                            <div class="itemname fs_15">BP 153</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil14.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">연필</div>
+                            <div class="itemname fs_15">연필_모니주(오렌지/핑크/퍼플)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil15.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">연필</div>
+                            <div class="itemname fs_15">연필_모니주(그린/블루)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil16.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">사인펜</div>
+                            <div class="itemname fs_15">모니주 사인펜(핑크/블루)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil17.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">라이브 칼라 DIY</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil18.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">프러스펜 S / 리필심</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil19.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">프러스펜 3000</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item pencil mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/pencil20.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">어데나</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker1.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">워터브러쉬</div>
+                            <div class="itemname fs_15">워터 리얼 브러쉬</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker2.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">컬러 리얼 브러쉬</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker3.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">붓펜 12색 세트</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker4.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성펜</div>
+                            <div class="itemname fs_15">컬러 트윈 브러쉬</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker5.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">크레파스</div>
+                            <div class="itemname fs_15">크레파스_모니주(옐로우)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker6.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">크레파스</div>
+                            <div class="itemname fs_15">크레파스_모니주(핑크)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker7.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">크레파스</div>
+                            <div class="itemname fs_15">크레파스_모니주(블루)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker8.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">색연필</div>
+                            <div class="itemname fs_15">종이말이 색연필_모니주(블루/핑크)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker9.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">샤프식 색연필</div>
+                            <div class="itemname fs_15">샤프식 색연필_모니주(블루/핑크)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker10.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">그림물감</div>
+                            <div class="itemname fs_15">그림물감_모니주(핑크)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker11.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">그림물감</div>
+                            <div class="itemname fs_15">그림물감_모니주(블루)</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker13.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">세라믹마카 480 / 482</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker14.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">패브릭마카 470</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker15.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">데코마카 463</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker16.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">데코마카 460</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker17.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">수성마카</div>
+                            <div class="itemname fs_15">붓펜</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker18.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">키친마카 420</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker19.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">산업마카</div>
+                            <div class="itemname fs_15">프로 페인트마카</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker20.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">보드마카</div>
+                            <div class="itemname fs_15">시그마플로 생잉크 보드마카 220 / 221</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item marker mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/marker21.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">생활마카</div>
+                            <div class="itemname fs_15">가든마카 450</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note1.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">노트</div>
+                            <div class="itemname fs_15">지퀀스 노트 The Color A5</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note2.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">다목적으로 사용 가능한 목공풀</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note3.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">다목적으로 사용 가능한 목공풀 2-Way</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note4.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">빨리 마르는 물풀</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note5.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">붙였다 뗄 수 있는 메모 풀</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note6.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">모서리에 바르기 쉬운 삼각풀</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_card font_en text-left element-item note mb-3">
+                    <a href="#!" class="">
+                        <img src="./images/note7.jpg" alt="" class="img-fluid">
+                        <div class="card_text">
+                            <div class="cate fs_12">풀</div>
+                            <div class="itemname fs_15">한 번에 잘 발리는 부드러운 풀</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="p_info">
+            <div class="infoWrap">
+                <!-- <span class="arr1"> -->
+                <img src="./images/p_arr1.gif" alt="" class="arr1">
+                <!-- </span> -->
+                <!-- <span class="arr2"> -->
+                <img src="./images/p_arr2.gif" alt="" class="arr2">
+                <!-- </span> -->
+                <div class="ds fs_12">
+                    <div class="drag_img d-flex justify-content-center">
+                        <img src="./images/p_cursor.gif" alt="">
+                    </div>
+                    DRAG & SCROLL
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- video -->
+    <div class="video">
+        <video muted loop class="bgvid" id="player">
+            <source src="https://dfrkkcv2hg1jc.cloudfront.net/data/video/monami_brand_web_60.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- info -->
+    <div class="info">
+        <div class="conWrap d-flex flex-column flex-lg-row">
+            <div class="news py-3 mt-3">
+                <div class="tit d-flex justify-content-space-between">
+                    <h2 class="fs_20 font_en">MONAIMI NEWS</h2>
+                    <a href="#!" class="fs_11 align-self-center">MORE</a>
+                </div>
+                <ul class="news_lists">
+                    <li class="first d-flex justify-content-space-between">
+                        <div class="thum">
+                            <a href="#!">
+                                <img src="./images/b_file_1722840818cni1034hd4.png" width="164" height="116">
+                            </a>
+                        </div>
+                        <div class="txt px-2 justify-self-center align-self-center">
+                            <a href="#!">
+                                <div class="news_tit fs_21">모나미, 라이엇 게임즈와 컬래버 신제품 출시</div>
+                            </a>
+                            <p class="news_text1 fs_14">LoL, TFT 게임 속 캐릭터를 볼펜으로 만나보세요!모나비, 라이엇 게임즈와 컬래버 신제품 출시-컬래버레이션 전략..</p>
+
+                            <span class="date fs_13_5">2024-08-05</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#!" class="news_text fs_13_5">- 모나미, 브랜드 서포터즈 ‘펜클럽(Pen Club)’ 7기 모집</a>
+                        <span class="date fs_13_5">2024-07-22</span>
+                    </li>
+                    <li>
+                        <a href="#!" class="news_text fs_13_5">- 모나미, 프러스펜 수채화 드로잉 원데이클래스 개최!</a>
+                        <span class="date fs_13_5">2024-06-27</span>
+                    </li>
+                    <li>
+                        <a href="#!" class="news_text fs_13_5">- 모나미, 가정의 달 맞이 신제품 프로모션 진행...</a>
+                        <span class="date fs_13_5">2024-05-16</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="inquiry pb-5 pb-lg-0">
+                <div class="tit fs_20 font_en">INQUIRY</div>
+                <P class="text-center fs_13_5">언제나 소중한 의견에 귀 길울이겠습니다. <br>궁금한 사항은 문의하세요.</P>
+                <a href="#!" class="font_en fs_13_5 text-center">INQUIRY NOW</a>
+            </div>
+            <div class="shop pb-5 pb-lg-0">
+                <div class="tit font_en fs_20">모나미 네이버 브랜드스토어</div>
+                <p class="text-center fs_13_5">모니터 공식 쇼핑몰입니다. <br>공식몰만의 다양한 혜택을 만나보세요.</p>
+                <a href="#!" class="font_en fs_13_5 text-center">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="ft">
+        <div class="footer_container px-3">
+            <div class="foot_top d-flex justify-content-between align-items-center">
+                <h1> <img src="./images/foot_logo.jpg" alt="">
+                </h1>
+                <ul class="fm align-items-center d-flex mb-0">
+                    <li>
+                        <a href="#!" class="fs_13_5 foot_color">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="fs_14 text-white">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="fs_13_5 foot_color">이메일무단수집거부</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="mb-1">
+        <div class="footer_container d-flex flex-column gap-5 gap-lg-0 flex-lg-row justify-content-between px-3">
+            <div class="d-flex gap-2 gap-lg-5 flex-column flex-lg-row text-center text-lg-start align-items-center ">
+                <div class="footer_info">
+                    <h4 class="fs_15 text-white font_en">INFO</h4>
+                    <p class="fs_14 footer_color02 mb-0">ADDRESS : 경기도 용인시 수지구 손곡로 17 l TEL : 031-216-0153 l FAX :
+                        031-270-5154</p>
+                    <p class="fs_12 footer_color02">COPYRIGHT(C) MONAMI.CO.,LTD. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="customer_center">
+                    <h4 class="fs_15 text-white font_en">CUSTOMER CENTER</h4>
+                    <h4 class="fs_24 footer_color02 font_en fw-light">080-022-0153</h4>
+                    <button class="btn_kakao fs_13_5 d-flex align-items-center justify-content-center">
+                        <p class="">카카오톡 문의</p>
+                        <i class="fa-solid fa-angle-right footer_color03"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="family_site d-flex justify-content-center">
+                <button class="btn_fam d-flex align-items-center justify-content-between px-3 py-0">
+                    <h4 class="fs_13 footer_color02 font_en p-0 m-0">FAMILY SITE</h4>
+                    <i class="fa-solid fa-angle-up footer_color02"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script>
+        const video = document.getElementById('player');
+        const videoDiv = document.querySelector('.video');
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+
+        observer.observe(videoDiv);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"
+        integrity="sha512-/ncZdOhQm5pgj5KHy720Ck7XF5RzYK6rtUsLNnGcitXrKT3wUYzTrPlOSG7SdL2kDzkuLEOFvrQRyllcZkeAlg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./horizontal.js"></script>
+    <script>
+        const btns = $(".p_tabs .catebtn a")
+
+        btns.click(function () {
+            // this 자기 자신 -> 몇번째가 클릭됬는지
+            let i = $(this).index()
+            console.log(i)
+            // btns의 i번째에 class 추가
+            btns.removeClass("on")
+            btns.eq(i).addClass("on")
+
+            let selector = btns.eq(i).attr("data-filter")
+            console.log(selector)
+
+            $(".best_sec .card_wrap").isotope({
+                layoutMode: 'horiz',
+                filter: selector,
+                horiz: {
+                    verticalAlignment: 0.5
+                }
+            })
+        })
+
+        window.onload = function () {
+            $("#btn").trigger("click")
+        }
+
+    </script>
+    <script>
+        function toggleMenu(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
