@@ -1,12 +1,16 @@
 <!-- vb 입력 후 tab -->
 <template>
    <NavbarView :data="data" />
-   <ContainerView :data="data" @increaseLike="increaseLike" @modalOpen="modalOpen" />
+   <SearchBarView :data="data_temp" @searchMovie="searchMovie" />
+   <div class="container">
+      <button @click="showAllView">전체보기</button>
+   </div>
+   <ContainerView :data="data_temp" @increaseLike="increaseLike" @modalOpen="modalOpen" />
+   <ModalView :data="data" :isModal="isModal" :num="selectedNum" @closeModal="closeM" />
    <!-- v-bind 생략 -->
    <!-- :이름="데이터" -> 이름 부분은 임의로 작성 가능 / 데이터 부분은 진짜 데이터 이름으로 작성 -->
    <!-- 이 데이터는 받는 곳에서 props로 받아야 함(받는 곳(자식)에서는 데이터 수정 불가) -->
    <!-- @자식에서 보내는 신호 이름 = 함수 이름 -> 함수는 밑에서 정의해줘야함 -->
-   <ModalView :data="data" :isModal="isModal" :num="selectedNum" @closeModal="closeM" />
 </template>
 
 <script>
@@ -14,6 +18,7 @@ import mdata from './assets/mdata';
 import NavbarView from './components/NavbarView.vue';
 import ModalView from './components/ModalView.vue';
 import ContainerView from './components/ContainerView.vue';
+import SearchBarView from './components/SearchBarView.vue';
 
 // 보통 데이터는 부모 Component에 넣어줘야함
 // 자식 Component에 각각 다 넣어두면 안됨
@@ -25,6 +30,7 @@ export default {
          isModal: false,
          //  title: 'test',
          selectedNum: 0,
+         data_temp: [...mdata],
       };
    },
    methods: {
@@ -37,16 +43,26 @@ export default {
       },
       modalOpen(num) {
          this.isModal = true;
-         this.selectedNum = num;
+         this.selectedNum = this.data.findIndex(item => item.id === num);
       },
       closeM() {
          this.isModal = false;
+      },
+      searchMovie(title) {
+         console.log('영화이름 : ' + title);
+         this.data_temp = this.data.filter(movie => {
+            return movie.title.includes(title);
+         });
+      },
+      showAllView() {
+         this.data_temp = [...this.data];
       },
    },
    components: {
       NavbarView: NavbarView,
       ModalView: ModalView,
       ContainerView: ContainerView,
+      SearchBarView: SearchBarView,
    },
 };
 </script>

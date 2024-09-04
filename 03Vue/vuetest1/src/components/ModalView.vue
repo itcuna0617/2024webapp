@@ -39,6 +39,7 @@ export default {
    display: flex;
    justify-content: center;
    align-items: center;
+   z-index: 99999;
    .inner {
       background: #fff;
       width: 500px;

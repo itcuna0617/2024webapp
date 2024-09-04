@@ -15,9 +15,9 @@
                <!-- $emit(신호이름, 파라미터1, 파라미터2, ...) 이런식으로 넘기고 -->
                <!-- 부모에서는 @신호이름="실행할 함수이름" 으로 수신한 후에 함수 안에서 넘어온 변수 사용 가능 -->
                <!-- script에서 실행할 함수이름(파라미터1 받을 변수, 파라미터2 받을 변수, ...) 이렇게 받아서 사용 -->
-               <p>👍 {{ item.like }}<button @:click="$emit('increaseLike', i)">클릭</button></p>
+               <p>👍 {{ item.like }}<button @:click="$emit('increaseLike', item.id)">클릭</button></p>
             </div>
-            <div class="btn btn-primary" v-on:click="$emit('modalOpen', i)">상세보기</div>
+            <div class="btn btn-primary" v-on:click="$emit('modalOpen', item.id)">상세보기</div>
          </div>
       </div>
    </div>
