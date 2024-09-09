@@ -4,6 +4,10 @@
       type="text"
       class="inp"
       @input="inputText = $event.target.value"
+      @keyup.enter="
+        $store.commit('searchCity', inputText);
+        $store.dispatch('getWeather');
+      "
       placeholder="지역명을 입력하세요"
     />
     <div
