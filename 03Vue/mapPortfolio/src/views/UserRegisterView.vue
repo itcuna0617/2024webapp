@@ -43,14 +43,20 @@
         <label class="inputLabel fs-5 me-3 justify-self-start" for="fileform"
           >주소</label
         >
-        <input
-          type="text"
-          class="form-control"
-          id="fileform"
-          placeholder="addr"
-          v-model="userdata.addr"
-        />
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            id="fileform"
+            placeholder="addr"
+            v-model="userdata.addr"
+          />
+          <label class="btn btn-secondary" for="fileform" @click="addressMap"
+            >주소 검색</label
+          >
+        </div>
       </div>
+      <AddressView />
       <div class="row mb-3 col-8 col-md-6">
         <label class="inputLabel fs-5 me-3 justify-self-start" for="fileform"
           >대표 이미지</label
@@ -66,6 +72,9 @@
           <label class="input-group-text" for="fileform">Upload</label>
         </div>
       </div>
+      <div class="row mb-3 col-8 col-md-6">
+        <img :src="userdata.image" alt="" />
+      </div>
       <div class="btn btn-primary" @click="addUser">회원가입</div>
     </div>
   </div>
@@ -76,6 +85,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
+import AddressView from "../components/AddressView.vue";
 
 const store = useStore();
 const router = useRouter();
@@ -96,7 +106,7 @@ const clearform = () => {
   userdata.value.image = null;
 };
 
-const addUser = () => {
+const addUser = async () => {
   let uData = {
     userid: userdata.value.userid,
     password: userdata.value.password,
@@ -104,8 +114,13 @@ const addUser = () => {
     addr: userdata.value.addr,
     image: userdata.value.image,
   };
-  store.commit("addUser", uData);
-  clearform();
+  let result = await store.dispatch("addUserCheck", uData);
+  if (result) {
+    alert("회원가입 성공!");
+    router.push("/user");
+  } else {
+    alert("동일한 아이디가 이미 존재합니다.");
+  }
   router.push("/");
 };
 
@@ -115,6 +130,10 @@ const handleImage = (e) => {
   if (file) {
     userdata.value.image = URL.createObjectURL(file);
   }
+};
+
+const addressMap = () => {
+  store.commit("openAddress");
 };
 </script>
 

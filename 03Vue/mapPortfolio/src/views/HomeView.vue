@@ -17,6 +17,7 @@
           class="inputText rounded justify-self-end"
           id="fileform"
           placeholder="id"
+          v-model="logindata.userid"
         />
       </div>
       <div class="inputWrap mb-3 d-flex">
@@ -26,10 +27,11 @@
           class="inputText rounded"
           id="fileform"
           placeholder="password"
+          v-model="logindata.password"
         />
       </div>
       <div class="btn-group">
-        <div class="btn btn-primary mt-2 me-4 rounded" @click="addUser">
+        <div class="btn btn-primary mt-2 me-4 rounded" @click="login">
           로그인
         </div>
         <div class="btn btn-primary mt-2 rounded" @click="registerUser">
@@ -41,12 +43,37 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 
+const store = useStore();
 const router = useRouter();
 
-const registerUser = () => {
+const logindata = ref({
+  userid: null,
+  password: null,
+});
+
+const registerUser = async () => {
   router.push("/register");
+  console.log(store.state.userData);
+};
+
+const login = async () => {
+  // console.log(logindata.value);
+  let tempdata = ref({
+    userid: logindata.value.userid,
+    password: logindata.value.password,
+  });
+  let result = await store.dispatch("loginCheck", tempdata);
+  console.log(result);
+  if (result) {
+    alert("로그인 성공!");
+    router.push("/user");
+  } else {
+    alert("아이디 / 비밀번호가 일치하지 않습니다.");
+  }
 };
 </script>
 
