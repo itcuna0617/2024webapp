@@ -1,5 +1,5 @@
 <template>
-  <ModalView v-if="$store.state.modalView" />
+  <!-- <ModalView v-if="$store.state.modalView" /> -->
   <NavbarView />
   <router-view />
 </template>

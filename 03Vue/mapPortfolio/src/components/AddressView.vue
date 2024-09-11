@@ -1,8 +1,8 @@
 <template>
   <div class="address" v-if="$store.state.modalView">
-    <div>지도 {{ moveLat }} / {{ moveLng }}</div>
+    <!-- <div>지도 {{ moveLat }} / {{ moveLng }}</div> -->
     <div id="map" style="width: 500px; height: 400px"></div>
-    {{ latitude }}{{ longitude }}
+    <!-- {{ latitude }}{{ longitude }} -->
   </div>
 </template>
 

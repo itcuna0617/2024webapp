@@ -56,7 +56,7 @@
           >
         </div>
       </div>
-      <AddressView />
+      <AddressView v-if="$store.state.modalView" />
       <div class="row mb-3 col-8 col-md-6">
         <label class="inputLabel fs-5 me-3 justify-self-start" for="fileform"
           >대표 이미지</label

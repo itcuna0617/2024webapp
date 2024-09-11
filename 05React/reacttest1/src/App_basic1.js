@@ -54,6 +54,9 @@ function App() {
       >
         모달
       </button>
+
+      {/* shop.map((i) => {return "text"}) 는 아래와 같이 쓸 수 있음*/}
+      {/* shop.map(i => "text") */}
       {shop.map((item, i) => {
         return (
           <>
@@ -70,7 +73,7 @@ function App() {
 }
 
 // 원래 다른 파일로 작성된 거라면 import로 가져와서 사용이 가능한데 같은데 작성했으므로
-// props를 통해 데이터 받음
+// props를 통해 데이터 받음(이름이 꼭 props는 아니어도 되지만 명시적으로 표기하기 위해서)
 // 옮겨받는 데이터는 부모에서 수정되어야 함(vue에서와 비슷)
 function Modal(props) {
   return (
