@@ -11,7 +11,7 @@ function App() {
 
   // useEffect() -> 값이나 이벤트가 변경되면 동작함
   // [] -> 마운트될 때 한 번만실행
-  // [num] -> 계속 실행됨
+  // [num] -> 계속 실행됨(num이 변경될 때마다)
   // useEffect(() => {
   //   console.log("ok");
   // }, []);

@@ -1,10 +1,9 @@
 <template>
   <!-- <div class="address" v-if="$store.state.modalView">
-    <div>지도 {{ moveLat }} / {{ moveLng }}</div>
-    <div id="map" style="width: 500px; height: 400px"></div>
-    {{ latitude }} / {{ longitude }}
-  </div> -->
-  <div id="addr"></div>
+      <div>지도 {{ moveLat }} / {{ moveLng }}</div>
+      <div id="map" style="width: 500px; height: 400px"></div>
+      {{ latitude }} / {{ longitude }}
+    </div> -->
   <div class="map_wrap">
     <div
       id="map"
@@ -12,19 +11,19 @@
     ></div>
 
     <!-- <div id="menu_wrap" class="bg_white">
-      <div class="option">
-        <div>
-          <form onsubmit="searchPlaces(); return false;">
-            키워드 :
-            <input type="text" value="이태원 맛집" id="keyword" size="15" />
-            <button type="submit">검색하기</button>
-          </form>
+        <div class="option">
+          <div>
+            <form onsubmit="searchPlaces(); return false;">
+              키워드 :
+              <input type="text" value="이태원 맛집" id="keyword" size="15" />
+              <button type="submit">검색하기</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <hr />
-      <ul id="placesList"></ul>
-      <div id="pagination"></div>
-    </div> -->
+        <hr />
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+      </div> -->
   </div>
 </template>
 
